@@ -152,7 +152,7 @@ export class ReactPainter extends React.Component<ReactPainterProps, PainterStat
 
   handleSave = () => {
     const { onSave } = this.props;
-    canvasToBlob(this.canvasRef, 'image/png')
+    canvasToBlob(this.canvasRef, 'image/svg+xml')
       .then((blob: Blob) => {
         onSave(blob);
         this.setState({
